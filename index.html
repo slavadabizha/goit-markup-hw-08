@@ -5,10 +5,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>goit-markup-hw-02</title>
+    <title>goit-markup-hw-07</title>
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+    crossorigin="anonymous"
   />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,10 +22,13 @@
   <body>
             <!--main page-->
     <header>
+      
       <div class="container">
+       
         <div class="container-nav">
           <div class="container main-nav">
            <a href="./index.html" class="logo"><span class="low-logo">WEB</span>STUDIO</a>
+
             <nav>
               <ul class="site-nav">
                <li class="item"><a href="./index.html" class="nav-links_current">Studio</a></li>
@@ -35,63 +40,135 @@
               <li class="item"><a href="mailto:info@devstudio.com" class="contacts">info@devstudio.com</a></li>
               <li class="item"><a href="tel:+11(000)111-11-11" class="contacts">+11(000)111-11-11</a></li>
             </ul>
+            <ul class="tablet-mail list">
+              <li class="tablet-contact-item"><a href="mailto:info@devstudio.com" class="tablet-email">info@devstudio.com</a></li>
+              <li class="tablet-contact-item"><a href="tel:+11(000)111-11-11" class="tablet-tel">+11(000)111-11-11</a></li>
+             </ul>
+
+            <button type="button" class="mobile-menu-open js-open-menu">
+              <svg class="mobile-menu-open__icon" width="32" height="22">
+          <use href="./images/icons.svg#burger-icon"></use></svg></button>
           </div>
         </div>
+        <div class="mobile-menu js-menu-container">
+          <button class="mobile-menu__clouse-btn js-close-menu">
+            <svg class="mobile-menu__clouse-icon" width="8" height="8" >
+             <use href="./images/icons.svg#icon-close"></use>
+           </svg>
+          </button>
+          <ul class="menu list">
+            <li class="mobile-item"><a href="./index.html" class="mobile_nav-links">Studio</a></li>
+            <li class="mobile-item"><a href="./portfolio.html" class="mobile_nav-links">Portfolio</a></li>
+            <li class="mobile-item"><a href="./portfolio.html" class="mobile_nav-links color-link">Contacts</a></li>
+          </ul>
+           <div class="mobile-wrapper">
+            <ul class="mobile-mail list">
+             <li class="mobile-contact-item"><a href="tel:+11(000)111-11-11" class="mobile-tel">+11(000)111-11-11</a></li>
+             <li class="mobile-contact-item"><a href="mailto:info@devstudio.com" class="mobile-email">info@devstudio.com</a></li>
+            </ul>
+           <ul class="mobile-social-list list">
+            <li class="mobile-social-item">
+                <a href="" class="mobile-social-link">
+                    <svg class="mobile-social-icon" width="24" height="24">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="mobile-social-item">
+                <a href="#" class="mobile-social-link">
+                    <svg class="mobile-social-icon" width="24" height="24">
+                        <use href="./images/icons.svg#icon-twitter"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="mobile-social-item">
+                <a href="#" class="mobile-social-link">
+                    <svg class="mobile-social-icon" width="24" height="24">
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="mobile-social-item">
+                <a href="#" class="mobile-social-link">
+                    <svg class="mobile-social-icon" width="24" height="24">
+                        <use href="./images/icons.svg#icon-linkedin"></use>
+                    </svg>
+                </a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <!--header-->
+      <div class="tablet">
+        
+          </div>      
+        <picture>
+          <source srcset="../img-desktop.jpg, ../img-desktop@2x.jpg 2x" 
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                  />
+          <source srcset="../images/img-tablet.jpg, ../images/img-tablet@2x.jpg 2x" 
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                  />
+          <source srcset="../images/img-mobile.jpg, ../images/img-mobile@2x.jpg 2x"
+                  media="(min-width: 480px)"
+                  />
+          <images src="../images/Header.jpg" alt="">
+        </picture>
+      </div>
     </header>
     <main>
       <!--section 1-->
-    <section class="hero">
+       <section class="hero">
       <div class="container">
-        <h1 class="hero-title">Effective Solutions for Your Business</h1>
+            <h1 class="hero-title">Effective Solutions for Your Business</h1>
         <button type="button" data-modal-open class="main-button">Order Service</button>
-      </div>
-    </section>
+      </div> 
+     </section>
       <section class="feature">
         <h2 hidden>Feature</h2>
         <div class="container">
 
-        <ul class="feature_list">
-          <!--feature1-->
+        <ul class="feature_list list"> 
+          <!-- feature1 -->
           <li class="item">
             <h3 class="card-title">Strategy</h3>
-            <p class="card-text">
+            <p class="card_text">
               Our goal is to identify the business problem to walk away with the
               perfect and creative solution.
             </p>
-          </li>
-          <!--feature 2-->
-          <li class="item">
+          </li> 
+          <!-- feature 2 -->
+          <li class="item"> 
             <h3 class="card-title">Punctuality</h3>
-            <p class="card-text">
+            <p class="card_text">
               Bring the key message to the brand's audience for the best price
               within the shortest possible time.
             </p>
-          </li>
-          <!--feature 3-->
+          </li> 
+          <!-- feature 3 -->
           <li class="item">
             <h3 class="card-title">Diligence</h3>
-            <p class="card-text">
+            <p class="card_text">
               Research and confirm brands that present the strongest digital
               growth opportunities and minimize risk.
             </p>
-          </li>
+          </li>  
           <!--feature 4-->
-          <li class="item">
+           <li class="item">
             <h3 class="card-title">Technologies</h3>
-            <p class="card-text">
+            <p class="card_text">
               Design practice focused on digital experiences. We bring forth a
               deep passion for problem-solving.
             </p>
           </li>
         </ul>
       </div>
-      </section>
+      </section> 
       <!--section 2-->
-    <section class="What_doing">
+    <section class="what_doing">
       <div class="container">
-        <h2 class="What_are_we_doing">What are we doing</h2>
+        <h2 class="what_are_we_doing">What are we doing</h2>
         <ul class="card-title_list">
           <li>
             <img src="images/monitor.jpg" width="360" height="300" alt="img1" />
@@ -104,16 +181,16 @@
           </li>
         </ul>
       </div>
-    </section>
+    </section> 
        <!--section 3-->
       <section class="team-list">
         <div class="container">
         <h2 class="our_team">Our Team</h2>
-        <ul class="flex_container">
+        <ul class="flex_container list">
           <li class="team-list-item">
             <div>
             <img
-              src="images/Mark_Guerro.jpg"
+              src="./images/mark.jpg"
               width="264"
               height="260"
               alt="Mark Guerro"
@@ -150,7 +227,7 @@
                           <use href="./images/icons.svg#icon-linkedin"></use>
                       </svg>
                   </a>
-              </li>
+            </li>
           </ul>
             </div>
           </li>
@@ -282,12 +359,12 @@
           </li>
         </ul>
       </div>
-      </section>
+      </section> 
       <!-- section customers -->
       <section class="customers">
         <div class="container">
         <h2 class="title-customers">Customers</h2>
-        <ul class="logo-company">
+        <ul class="logo-company list">
             <li class="logo-icon">
                 <a href="#" class="logo-icon-link">
                     <svg class="logo-icon-company" width="104" height="56">
@@ -332,7 +409,7 @@
             </li>
         </ul>
         </div>
-        </section>
+        </section> 
       <!--footer-->
     </main>
       <footer class="footer">
@@ -377,7 +454,7 @@
           </ul>
        </div>  
        
-      <div class="social_media">
+      <div class="footer-form">
         
         <h3 class="title_social_media">Subscribe</h3>
         <form class="email-input">
@@ -443,8 +520,8 @@
     </form>
     </div>
     </div>
-      <script src="./js/modal.js"></script>
+      <script src="./js/modal.js"></script> 
          
-    </form>
-  </body>
+        <script src="./js/mobile-menu.js"></script>
+  </body> 
 </html>
