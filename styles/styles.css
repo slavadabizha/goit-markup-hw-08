@@ -57,7 +57,7 @@ img{
         margin-right: auto;
     } 
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
     .container {
         width: 736px;
         margin-left: auto;
@@ -69,12 +69,21 @@ img{
     .container {
         width: 1158px;
             } 
-            .tablet-mail {
+            .tablet-email {
+                display: none;
+            }
+            .tablet-tel {
                 display: none;
             }
 }
 @media screen and (max-width: 1199px) {
     .contacts{
+        display: none;
+    }
+    .what_doing {
+        display: none;
+    }
+    .what_are_we_doing{
         display: none;
     }
 }
@@ -365,11 +374,17 @@ nav {
         color: #ffffff;
         margin: 0 auto 48px auto;
         } 
+        .tablet-mail{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;  
+        }
     .tablet-email {
-            display: block;
+            
+            text-decoration: none;
             margin: 0;
             padding: 0;
-            padding-top:24px;
+            
             margin-left: auto;
             padding-bottom: 4px;
             font-family: 'Roboto'; 
@@ -378,16 +393,19 @@ nav {
             line-height: 16px;  
             letter-spacing: 0.04em; 
             color: var(--text);
+            
            }
     .tablet-tel{
             margin-left: auto;
-            padding-bottom: 10px;
+            text-decoration: none;
+           
             font-family: 'Roboto'; 
             font-weight: 400px;    
             font-size: 12px;
             line-height: 16px;  
             letter-spacing: 0.04em; 
             color: var(--text);
+            
            }
     .hero {
             padding: 112px 0;
@@ -405,17 +423,17 @@ nav {
             margin: 0 auto;
             margin-bottom: 40px;
            }
-           .feature_list .item:nth-child(1)::before {     
-            display: none;   
+        .feature_list .item:nth-child(1)::before {     
+              
         }
         .feature_list .item:nth-child(2)::before {
-           display: none;
+           
         }
         .feature_list .item:nth-child(3)::before {
-            display: none;
+            
         }
         .feature_list .item:nth-child(4)::before {
-            display: none;
+            
         }
         .feature_list {
             display: flex;
@@ -441,9 +459,7 @@ nav {
             color: var(--dark);
             margin: 0;
         }
-        .what_doing {
-            display: none;
-        }
+        
         .our_team {
         font-size: 36px;
         line-height: 1.1;
@@ -523,6 +539,7 @@ header {
 } 
  .feature_list {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: center;
     padding: 0;
     margin: 0;    
@@ -535,6 +552,9 @@ header {
         letter-spacing: 0.02em;
         color: var(--dark);
         margin-bottom: 8px;
+     }
+     .feature_list .item {
+        width: 264px;
      }
     .feature_list
     .item::before {
@@ -562,17 +582,7 @@ header {
         background-image: url("../images/astronaut.svg"); 
         margin-bottom: 8px;
     }
-    .what_are_we_doing { 
-     text-align: center;
-     margin-top: 0;
-     margin-bottom: 72px;
-     font-weight: 500;
-     font-size: 36px;
-     line-height: 40px;
-     letter-spacing: 0.02em;
-     color: var(--dark);
-    }
-
+    
 .card-title_list {
     display: flex;
     justify-content: center;
@@ -587,6 +597,23 @@ img {
     max-width: 100%;
     height: auto;
 }
+.team-list 
+{   padding-top: 120px;
+    padding-bottom: 120px;
+    height: 732px;
+    background-color: var(--light);
+    
+    }
+.what_are_we_doing { 
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 72px;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    color: var(--dark);
+   }
  .our_team
  {
     text-align: center;
@@ -601,6 +628,7 @@ img {
      .flex_container {
      display: flex;
      justify-content: center;
+     flex-wrap: nowrap;
      margin: 0;
      padding: 0;
      gap: 24px;
@@ -616,13 +644,14 @@ img {
         } 
  /* section-customers */
  .customers {
-    display: block;
+    
     padding-top: 120px;
     padding-bottom: 120px;
     } 
     .logo-company {
     padding: 0;
     display: flex;
+    flex-wrap: nowrap;
     justify-content: center;
     gap: 24px;
     } 
@@ -809,7 +838,7 @@ button:focus {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--dark);
-        } 
+    } 
         
 /* identical to box height, or 120% */
 /* .container {
