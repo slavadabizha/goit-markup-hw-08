@@ -49,7 +49,20 @@ img{
     padding-left:  16px;
     padding-right: 16px;
 } 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) {
+    .hero-title {
+        font-size: 36px;
+       line-height: 1.1;
+       letter-spacing: 0.02em; 
+       width: 320px; 
+       color: var(--light);
+       margin: 0 auto;
+       margin-bottom: 72px;
+      }
+
+}
+@media screen and (min-width: 480px) and (max-width: 767px) 
+{
     .container {
         width: 428px;
         margin: 0;
@@ -60,19 +73,29 @@ img{
 @media screen and (min-width: 768px) and (max-width: 1199px) {
     .container {
         width: 736px;
+        margin: 0;
+        padding: 0;
         margin-left: auto;
         margin-right: auto;
-        padding: 0;
+       
      }                             
 }
 @media screen and (min-width: 1200px) {
     .container {
         width: 1158px;
+        margin-left: 16px;
+        margin-right: 16px;
             } 
             .tablet-email {
                 display: none;
             }
             .tablet-tel {
+                display: none;
+            }
+            .mobile-menu {
+                display: none;
+            }
+            .mobile-menu-open__icon {
                 display: none;
             }
 }
@@ -276,11 +299,13 @@ nav {
    .feature {
     padding: 96px 0;
 }
-.card-title {
+.card_title {
+    
     font-size: 36px;
     line-height: 1.1;
     letter-spacing: 0.02em;
     color: var(--dark);
+    padding-bottom: 8px;
 }
 .what_doing {
     display: none;
@@ -291,13 +316,23 @@ nav {
     padding-bottom: 128px;
     text-align: center;
 }
+
 .our_team {
     font-size: 36px;
     line-height: 1.1;
+    letter-spacing: 0.02em;
     text-align: center;
     margin-bottom: 72px;
     color: var(--dark);
 }
+.card-text {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--dark);
+    margin: 0;
+    margin-bottom: 8px;
+ } 
 .flex_container{
     width: 264px;
     margin: auto;
@@ -312,9 +347,16 @@ nav {
 }
 .team-list-item:not(:last-child) {
     margin-bottom: 72px;}
+    .card-title {    
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        color: var(--dark);
+            }
         
 .customers {
     display: block;
+    margin: 0 auto;
     padding-top: 96px;
     padding-bottom: 96px;
 }
@@ -335,9 +377,18 @@ nav {
     text-align: center;
     margin-bottom: 72px;
 }
-.footer-text {
-    text-align: left;
-}
+.footer {
+    background-color: var(--dark);
+    padding-top: 96px;
+    padding-bottom: 96px;
+ }
+
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+     }   
+
 .social_media {
     display: flex;
     flex-direction: column;
@@ -358,14 +409,32 @@ nav {
     width: 396px;
 }
 .subscribe {
-    margin: 0;
+    display: flex;
+    width: 165px;
+    height: 40px;
+    padding-left: 24px;
+   padding-top: 8px;
+    align-self: center;
+    background-color: var(--primary-brand);
+    color: #ffffff;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.04;
+    cursor: pointer;
+   padding-right: 16px;
+    border-radius: 4px;
+    box-shadow: var(--card-shadow);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
     .mobile-menu {display: none; }
     .mobile-menu-open {display: none; }
     .hero-title {
-        width: 492px; 
+        width: 494px; 
         font-family: 'Roboto';
         font-weight: 500px;
         font-size: 56px;
@@ -446,27 +515,24 @@ nav {
           .feature_list .item {
             width: calc((100% - 24px) / 2);
           }             
-        .card-title {
-        font-size: 36px;
-        line-height: 1.1;
-        letter-spacing: 0.02em;
-        color: var(--dark);
-        }
-        .card_text{
-            font-size: 16px;
-            line-height: 1.5;
+          .card_title {
+            font-size: 36px;
+            line-height: 1.1;
             letter-spacing: 0.02em;
             color: var(--dark);
-            margin: 0;
-        }
-        
-        .our_team {
-        font-size: 36px;
-        line-height: 1.1;
-        text-align: center;
-        margin-bottom: 72px;
-        color: var(--dark);
-         }
+            padding-bottom: 8px;
+            }                  
+         .our_team
+        {
+         text-align: center;
+         margin: 0;
+         margin-bottom: 72px;
+         font-weight: 500;
+         font-size: 36px;
+         line-height: 1.1;
+         letter-spacing: 0.02;
+         color: #2E2F42;
+       } 
          .team-list {
             background-color: var(--light);
             padding-top: 96px;
@@ -481,13 +547,29 @@ nav {
             margin: 0px 108px;
             background-color: white;
         }
+        .card-title {
+            font-size: 20px;
+            line-height: 1.2;
+            letter-spacing: 0.02em;
+            color: var(--dark);
+            }
+                
+        .card-text {        
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+            color: var(--dark);
+            margin: 0;
+            margin-bottom: 8px;
+         }
         .team-list-item {
             width: calc((100% - 24px) / 2);
             box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
         }
+        
         img{
             width: 264px;
-            height: 260px;
+            height: auto;
         }
         .customers {
             display: block;
@@ -499,7 +581,7 @@ nav {
             flex-wrap: wrap;
             column-gap: 24px;
             row-gap: 72px;
-            margin: 0 108px;
+           margin: 0 108px;
         }
         .logo-icon {
             flex-basis: calc((100% - 48px) / 3);
@@ -510,11 +592,39 @@ nav {
             flex-wrap: wrap;
             column-gap: 24px;
             row-gap: 72px;
-            margin: 0 108px;
-         } 
-                   
+            margin-right: 0;
+         }   
+         .footer {
+            background-color: var(--dark);
+            padding-top: 100px;
+            padding-bottom: 100px;
+            padding-left: 108px;
+            padding-right: 164px;
+         }           
         .footer-email {
            width: 264px;
+        }
+        .subscribe {
+            display: flex;
+            width: 165px;
+            height: 40px;
+            padding-left: 24px;
+           padding-top: 8px;
+            align-self: center;
+            margin-left: 24px;
+            background-color: var(--primary-brand);
+            color: #ffffff;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.04;
+            cursor: pointer;
+           padding-right: 16px;
+            border-radius: 4px;
+            box-shadow: var(--card-shadow);
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
 }  
 @media screen and (min-width: 1200px) {
@@ -533,6 +643,15 @@ body {
 header {
     box-shadow: var(--card-shadow);
 } 
+.hero-title {
+    font-size: 56px;
+   line-height: 60px;
+   letter-spacing: 0.02em; 
+   width: 500px; 
+   color: var(--light);
+   margin: 0 auto;
+   margin-bottom: 40px;
+  }
  .feature {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -544,15 +663,10 @@ header {
     padding: 0;
     margin: 0;    
     gap: 24px;
+    margin-left: 16px;
+    margin-right: 16px;
     } 
-    .card-text{
-        font-family: 'Roboto';
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        color: var(--dark);
-        margin-bottom: 8px;
-     }
+   
      .feature_list .item {
         width: 264px;
      }
@@ -597,13 +711,7 @@ img {
     max-width: 100%;
     height: auto;
 }
-.team-list 
-{   padding-top: 120px;
-    padding-bottom: 120px;
-    height: 732px;
-    background-color: var(--light);
-    
-    }
+
 .what_are_we_doing { 
     text-align: center;
     margin-top: 0;
@@ -613,6 +721,14 @@ img {
     line-height: 40px;
     letter-spacing: 0.02em;
     color: var(--dark);
+   }
+   .team-list 
+   {
+     margin: 0;
+    padding: 0;
+    padding-top: 120px;
+    height: 780px;
+    background-color: var(--light);
    }
  .our_team
  {
@@ -633,6 +749,14 @@ img {
      padding: 0;
      gap: 24px;
     } 
+    .card-text {
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: var(--dark);
+        margin: 0;
+        margin-bottom: 8px;
+     } 
 .team-list-item {
         width: 264px;
         background-color: #ffffff;
@@ -659,6 +783,44 @@ img {
     width: calc((100%-5*24px) / 6);
     height: 88px;    
     } 
+    .footer {
+        background-color: var(--dark);
+        padding-top: 100px;
+        padding-bottom: 100px;
+     }
+     .social_media {
+    margin-left: 120px;  
+    margin-right: 80px; 
+     } 
+     
+    .footer .container {
+        display: flex;
+        flex-wrap: wrap;
+        
+        row-gap: 100px;
+    }   
+    .subscribe {
+        display: flex;
+        width: 165px;
+        height: 40px;
+        padding-left: 24px;
+       padding-top: 8px;
+        align-self: center;
+        margin-left: 24px;
+        background-color: var(--primary-brand);
+        color: #ffffff;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.04;
+        cursor: pointer;
+       padding-right: 16px;
+        border-radius: 4px;
+        box-shadow: var(--card-shadow);
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
 }
 .logo {
     display: block;
@@ -805,9 +967,11 @@ button:focus {
     box-shadow: var(--card-shadow);
     
     }
-.card-content { 
-    padding: 16px 32px 16px 32px;
-     }
+.card-content {       
+    text-align: center;
+    padding: 32px 16px;
+     }  
+     
 .trailing_icons {
     padding: 0;
         display: flex;
@@ -833,12 +997,12 @@ button:focus {
     background: #31D0AA;
     cursor: pointer;
     }
-.card-title {
+/* .card-title {
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--dark);
-    } 
+    }  */
         
 /* identical to box height, or 120% */
 /* .container {
@@ -948,10 +1112,7 @@ button:focus {
         transform: translate(0, 100%);
         transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     } 
-.card-content {
-    text-align: center;
-    padding: 32px 16px;
- }       
+     
 .section-page{
     padding-top: 96px;
     padding-bottom: 120px;
@@ -1010,21 +1171,17 @@ button:focus {
 }
 .card-title { margin: 0 0 8px 0;
 }
-.card-text_portfolio{
+.card-text_portfolio {
     margin: 0;
 }
 .portfolio-cards_box {
     padding: 32px 16px;
 }
-.footer {
-    background-color: var(--dark);
-    padding-top: 100px;
-    padding-bottom: 100px;
- }
- /* .footer .container {
+
+  .footer .container {
     display: flex;
     align-items: baseline;
- } */
+ } 
 .footer-text {
     margin: 0;
     color: var(--accent);
@@ -1033,10 +1190,11 @@ button:focus {
     letter-spacing: 0.25;
     margin-top: 16px;
     width: 264px;
-}
-/* .social_media {
-    margin-left: 120px;   
-} */
+}  
+.social_media {
+    margin-left: 120px;  
+    margin-right: 80px; 
+     } 
 .title_social_media {
     margin: 0px 0px 16px 0px;
     font-weight: 500;
@@ -1282,28 +1440,7 @@ visibility: inherit;
     input {
         color:rgba(255, 255, 255, 0.3)
     }
-    .subscribe {
-        display: flex;
-        width: 165px;
-        height: 40px;
-        padding-left: 24px;
-       padding-top: 8px;
-        align-self: center;
-        margin-left: 24px;
-        background-color: var(--primary-brand);
-        color: #ffffff;
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: 0.04;
-        cursor: pointer;
-       padding-right: 16px;
-        border-radius: 4px;
-        box-shadow: var(--card-shadow);
-        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
+    
     .icon-subscribe { 
         margin-left: 16px;        
     }
