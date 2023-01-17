@@ -49,19 +49,25 @@ img{
     padding-left:  16px;
     padding-right: 16px;
 } 
-@media screen and (min-width: 320px) and (max-width: 427px) {
+@media screen and (min-width: 320px) and (max-width: 479px) {
     .hero-title {
         font-size: 36px;
        line-height: 1.1;
        letter-spacing: 0.02em; 
-       width: 320px; 
+       width: 100%; 
        color: var(--light);
        margin: 0 auto;
        margin-bottom: 72px;
       }
-      .footer-email {
-        width: 264px;
-      }
+    .footer-email {
+         width: 264px;  
+        height: 40px;
+        border: 1px solid rgba(255, 255, 255, 0.6);          
+        border-radius: 4px ;
+        padding-left: 16px;
+        background-color: inherit;   
+        margin-bottom: 16px;     
+    }
 
 }
 @media screen and (min-width: 480px) and (max-width: 767px) 
@@ -72,9 +78,24 @@ img{
         margin-left: auto;
         margin-right: auto;
     } 
+    .hero-title {
+        font-size: 36px;
+       line-height: 1.1;
+       letter-spacing: 0.02em; 
+       width: 350px; 
+       color: var(--light);
+       margin: 0 auto;
+       margin-bottom: 72px;
+      }
     .footer-email {
         width: 396px;
-      }
+        height: 40px;
+        border: 1px solid rgba(255, 255, 255, 0.6);          
+        border-radius: 4px ;
+        padding-left: 16px;
+        background-color: inherit;  
+        margin-bottom: 16px;      
+    }
     }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
     .container {
@@ -277,15 +298,7 @@ nav {
     background-position: center;    
     background-size: cover;   
     }
-   .hero-title {
-     font-size: 36px;
-    line-height: 1.1;
-    letter-spacing: 0.02em; 
-    width: 350px; 
-    color: var(--light);
-    margin: 0 auto;
-    margin-bottom: 72px;
-   }
+  
    
    .feature_list .item:nth-child(1)::before {     
     display: none;   
@@ -317,6 +330,13 @@ nav {
     color: var(--dark);
     padding-bottom: 8px;
 }
+.card_text {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--dark);
+    
+}
 .what_doing {
     display: none;
 }
@@ -347,6 +367,11 @@ nav {
     width: 264px;
     margin: auto;
     }
+    .card-content {       
+        text-align: center;
+        padding: 32px 16px;
+         }  
+         
 .team-list-item {
     background-color: #ffffff;
     text-align: center;
@@ -417,10 +442,7 @@ nav {
     align-items: center;
 
 }
-.footer-email {
-    margin-bottom: 16px;
-    width: 100%;
-}
+
 
 .subscribe {
     display: flex;
@@ -536,7 +558,14 @@ nav {
             letter-spacing: 0.02em;
             color: var(--dark);
             padding-bottom: 8px;
-            }                  
+            }   
+            .card_text {
+                font-size: 16px;
+                line-height: 1.5;
+                letter-spacing: 0.02em;
+                color: var(--dark);
+                
+            }               
          .our_team
         {
          text-align: center;
@@ -555,12 +584,13 @@ nav {
             text-align: center;
         }
         .flex_container{
+            margin: 0;
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
             gap: 24px;
-            margin-right: 0;
-            margin: 0px 108px;
-            background-color: white;
+            row-gap: 64px;                        
+            
         }
         .card-title {
             font-size: 20px;
@@ -580,12 +610,23 @@ nav {
         .team-list-item {
             width: calc((100% - 24px) / 2);
             box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+            width: 264px;
+            background-color: #ffffff;
+             border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+            overflow: auto;
         }
         
         img{
             width: 264px;
             height: auto;
         }
+        .card-content {       
+            text-align: center;
+            width: 264px;
+            padding: 32px 16px;
+             }  
+             
         .customers {
             display: block;
             padding-top: 96px;
@@ -608,7 +649,7 @@ nav {
             column-gap: 24px;
             row-gap: 72px;
             margin-right: 0;
-            width: 565px;
+            
          }   
          .footer {
             background-color: var(--dark);
@@ -625,7 +666,13 @@ nav {
             margin: 0;
         }      
         .footer-email {
-           width: 264px;
+            width: 264px;
+            height: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.6);          
+            border-radius: 4px ;
+            padding-left: 16px;
+            background-color: inherit;  
+               
         }
         .subscribe {
             display: flex;
@@ -719,6 +766,20 @@ header {
         background-image: url("../images/astronaut.svg"); 
         margin-bottom: 8px;
     }
+    .card_title {
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        color: var(--dark);
+        padding-bottom: 8px;
+        }  
+        .card_text {
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+            color: var(--dark);
+            
+        }
     
 .card-title_list {
     display: flex;
@@ -789,6 +850,11 @@ img {
         overflow: auto;
         display: block;
         } 
+        .card-content {       
+            text-align: center;
+            padding: 32px 16px;
+             }  
+             
  /* section-customers */
  .customers {
     
@@ -829,6 +895,14 @@ img {
         
         row-gap: 100px;
     }   
+    .footer-email {
+        width: 264px;  
+       height: 40px;
+       border: 1px solid rgba(255, 255, 255, 0.6);          
+       border-radius: 4px ;
+       padding-left: 16px;
+       background-color: inherit;        
+   }
     .subscribe {
         display: flex;
         width: 165px;
@@ -997,11 +1071,7 @@ button:focus {
     box-shadow: var(--card-shadow);
     
     }
-.card-content {       
-    text-align: center;
-    padding: 32px 16px;
-     }  
-     
+
 .trailing_icons {
     padding: 0;
         display: flex;
@@ -1450,14 +1520,7 @@ visibility: inherit;
     background-color: #ffffff;
     color: var(--primary-brand);
         }
-    .footer-email {
-        /* width: 264px;  */
-        height: 40px;
-        border: 1px solid rgba(255, 255, 255, 0.6);          
-        border-radius: 4px ;
-        padding-left: 16px;
-        background-color: inherit;        
-    }
+    
     
     .footer-email::placeholder {
         margin-top: 8px;
