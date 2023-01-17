@@ -69,7 +69,7 @@ img{
         margin-left: auto;
         margin-right: auto;
     } 
-}
+    }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
     .container {
         width: 736px;
@@ -77,14 +77,14 @@ img{
         padding: 0;
         margin-left: auto;
         margin-right: auto;
-       
-     }                             
+         }
+                                       
 }
 @media screen and (min-width: 1200px) {
     .container {
         width: 1158px;
-        margin-left: 16px;
-        margin-right: 16px;
+        margin-left: auto;
+        margin-right: auto;
             } 
             .tablet-email {
                 display: none;
@@ -98,6 +98,10 @@ img{
             .mobile-menu-open__icon {
                 display: none;
             }
+            .social_media {
+                display: none;
+            }
+            
 }
 @media screen and (max-width: 1199px) {
     .contacts{
@@ -396,7 +400,8 @@ nav {
     align-items: center;
     text-align: center;
     margin-bottom: 72px;
-}
+    }
+
 .footer-form {
     text-align: center;
 }
@@ -601,7 +606,14 @@ nav {
             padding-bottom: 100px;
             padding-left: 108px;
             padding-right: 164px;
-         }           
+         }  
+         .social_media {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin: 0;
+        }      
         .footer-email {
            width: 264px;
         }
@@ -790,10 +802,16 @@ img {
         padding-top: 100px;
         padding-bottom: 100px;
      }
+     
      .social_media {
-    margin-left: 120px;  
-    margin-right: 80px; 
-     } 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 72px;
+        margin-left: 120px;  
+        margin-right: 80px; 
+           }
      
     .footer .container {
         display: flex;
@@ -1193,10 +1211,7 @@ button:focus {
     margin-top: 16px;
     width: 264px;
 }  
-.social_media {
-    margin-left: 120px;  
-    margin-right: 80px; 
-     } 
+
 .title_social_media {
     margin: 0px 0px 16px 0px;
     font-weight: 500;
