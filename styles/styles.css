@@ -648,15 +648,16 @@ nav {
             flex-wrap: wrap;
             column-gap: 24px;
             row-gap: 72px;
-            margin-right: 0;
+            padding-right: 0;
             
          }   
          .footer {
-            background-color: var(--dark);
+             background-color: var(--dark);
             padding-top: 100px;
             padding-bottom: 100px;
             padding-left: 108px;
-            padding-right: 164px;
+            padding-right: auto;
+            
          }  
          .social_media {
             display: flex;
@@ -1033,7 +1034,7 @@ ul {
     list-style-type: none;
 }
 .hero { 
-    padding: 192px 0 192px;
+    padding: 112px 0 192px;
     text-align: center;
     max-width: 1440px;  
     min-height: 603px;
