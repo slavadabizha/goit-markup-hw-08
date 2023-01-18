@@ -59,6 +59,25 @@ img{
        margin: 0 auto;
        margin-bottom: 72px;
       }
+      .card_title {    
+        font-size: 36px;
+        line-height: 1.1;
+        letter-spacing: 0.02em;
+        color: var(--dark);
+        padding-bottom: 8px;
+        display: flex;
+        text-align: left;
+    }
+    .card_text {
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: var(--dark);
+        display: flex;
+        text-align: left;
+    }
+        
+    
     .footer-email {
          width: 264px;  
         height: 40px;
